@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagh Chal - Modern Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bagh Chal</h1>
+            <p>Tiger vs Goat Strategy Game</p>
+        </header>
+
+        <div class="game-area">
+            <div class="info-panel">
+                <div id="status">Status: Waiting to start...</div>
+                <div class="stats">
+                    <div>Goats Placed: <span id="goats-placed">0</span>/20</div>
+                    <div>Goats Captured: <span id="goats-captured">0</span>/5</div>
+                    <div>Baghs Trapped: <span id="baghs-trapped">0</span>/4</div>
+                    <div>Turn: <span id="turn-indicator">-</span></div>
+                </div>
+                <div class="controls">
+                    <button id="new-game-btn">New Game (Human vs Bot)</button>
+                    <!-- <button id="new-pvp-btn">New Game (PvP)</button> -->
+                    <button id="bot-move-btn" disabled>Trigger Bot Move</button>
+                </div>
+                <div id="message-log"></div>
+            </div>
+
+            <div class="board-container">
+                <!-- SVG lines for the board connections -->
+                <svg class="board-lines" width="500" height="500" viewBox="0 0 500 500">
+                    <!-- Horizontal Lines -->
+                    <line x1="50" y1="50" x2="450" y2="50" />
+                    <line x1="50" y1="150" x2="450" y2="150" />
+                    <line x1="50" y1="250" x2="450" y2="250" />
+                    <line x1="50" y1="350" x2="450" y2="350" />
+                    <line x1="50" y1="450" x2="450" y2="450" />
+                    
+                    <!-- Vertical Lines -->
+                    <line x1="50" y1="50" x2="50" y2="450" />
+                    <line x1="150" y1="50" x2="150" y2="450" />
+                    <line x1="250" y1="50" x2="250" y2="450" />
+                    <line x1="350" y1="50" x2="350" y2="450" />
+                    <line x1="450" y1="50" x2="450" y2="450" />
+
+                    <!-- Diagonals -->
+                    <line x1="50" y1="50" x2="450" y2="450" />
+                    <line x1="450" y1="50" x2="50" y2="450" />
+                    <line x1="250" y1="50" x2="50" y2="250" />
+                    <line x1="250" y1="50" x2="450" y2="250" />
+                    <line x1="50" y1="250" x2="250" y2="450" />
+                    <line x1="450" y1="250" x2="250" y2="450" />
+                </svg>
+                
+                <div id="board-grid" class="board-grid">
+                    <!-- JS will populate spots -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
