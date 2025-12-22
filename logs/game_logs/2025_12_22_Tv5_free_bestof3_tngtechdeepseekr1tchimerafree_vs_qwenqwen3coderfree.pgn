@@ -1,0 +1,12 @@
+[Event "Tv5_free"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "tngtech/deepseek-r1t-chimera:free (Goat)"]
+[Black "qwen/qwen3-coder:free (Tiger)"]
+[Result "0-1"]
+[Termination "Illegal Move"]
+
+ {Forfeit: tngtech/deepseek-r1t-chimera:free made illegal move}
+
+

@@ -1,0 +1,12 @@
+[Event "Tv5_free"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "allenai/olmo-3.1-32b-think:free (Goat)"]
+[Black "alibaba/tongyi-deepresearch-30b-a3b:free (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G25 Bx1535 3. G34 Bx2244 4. G33 Bx4422 5. G33 Bx2244 6. G45 Bx3533# 0-1
+
+

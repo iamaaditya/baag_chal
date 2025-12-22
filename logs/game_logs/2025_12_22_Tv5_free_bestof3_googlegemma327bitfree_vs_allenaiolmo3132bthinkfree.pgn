@@ -1,0 +1,12 @@
+[Event "Tv5_free"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "google/gemma-3-27b-it:free (Goat)"]
+[Black "allenai/olmo-3.1-32b-think:free (Tiger)"]
+[Result "0-1"]
+[Termination "Illegal Move"]
+
+ {Forfeit: google/gemma-3-27b-it:free made illegal move}
+
+

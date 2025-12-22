@@ -1,0 +1,36 @@
+[Event "Tv4_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "meta-llama/llama-4-maverick (Goat)"]
+[Black "qwen/qwen3-max (Tiger)"]
+[Result "1-0"]
+[Termination "Illegal Move"]
+
+ 1. G14 Bx1513 2. G33 B1322 3. G13 Bx2244 4. G14 B1122 5. G15 B2211 6. G22 Bx1133 7. G21 {Forfeit: qwen/qwen3-max made illegal move}
+
+
+[Event "Tv4_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "meta-llama/llama-4-maverick (Goat)"]
+[Black "qwen/qwen3-max (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G13 B1122 2. G14 B1524 3. G25 B2435 4. G24 Bx3515 5. G25 Bx1535 6. G32 Bx2242 7. G25 Bx3515 8. G25 Bx1533# 0-1
+
+
+[Event "Tv4_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "meta-llama/llama-4-maverick (Goat)"]
+[Black "qwen/qwen3-max (Tiger)"]
+[Result "1-0"]
+[Termination "Illegal Move"]
+
+ 1. G23 {Forfeit: qwen/qwen3-max made illegal move}
+
+

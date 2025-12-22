@@ -1,0 +1,39 @@
+
+[Event "Tv3_Mixed_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf7"]
+[White "meta-llama/llama-3.1-405b-instruct:free (Goat)"]
+[Black "allenai/olmo-3-32b-think:free (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1524 2. G23 B2434 3. G22 Bx3432 4. G33 B5544 5. G13 Bx3234 6. G33 B4443 7. G32 B4342 8. G43 B4253 9. G31 B5142 10. G35 Bx4224 11. G33 B2425 12. G42 B3424 13. G15 B2434 14. G24 Bx2545 15. G25 B3444 16. G51 B4434 17. G35 B5352 18. G54 Bx3414# 0-1
+
+
+
+[Event "Tv3_Mixed_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf7"]
+[White "meta-llama/llama-3.1-405b-instruct:free (Goat)"]
+[Black "allenai/olmo-3-32b-think:free (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G23 B2211 3. G22 B1524 4. G32 B2434 5. G13 B3424 6. G21 Bx1131 7. G43 B3142 8. G25 B4253 9. G31 B2434 10. G35 B5342 11. G14 B5544 12. G54 Bx4224 13. G33 B5142 14. G51 B2415 15. G41 Bx4224 16. G33 B4445 17. G44 B4555 18. G53 B5545 19. G55 Bx2442 20. G24 B4233 21. G2211 B3342 22. G2333 B4252 23. G2423 B3424 24. G3334 Bx2422# 0-1
+
+
+
+[Event "Tv3_Mixed_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf7"]
+[White "meta-llama/llama-3.1-405b-instruct:free (Goat)"]
+[Black "allenai/olmo-3-32b-think:free (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B5544 2. G23 B4454 3. G22 B1524 4. G32 B2413 5. G43 Bx1331 6. G22 B5455 7. G24 B5544 8. G15 B1112 9. G54 B4453 10. G14 B3141 11. G25 B5344 12. G13 B5152 13. G53 B4131 14. G35 B3142 15. G31 B4434 16. G41 B1211 17. G44 B4251 18. G42 B1112 19. G55 B1211 20. G45 B1121 21. G2212 B2122 22. G3121 B2231 23. G2122 B3121 24. G1211 B2131 25. G1312 Bx3113 26. G2322 Bx5131 27. G2423 B1324 28. G1413 B2414 29. G4241 Bx3151 30. G3342 Bx5133# 0-1
+
+

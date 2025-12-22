@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 import uuid
-from typing import Dict
+from typing import Dict, Optional
 import os
 
 from baghchal.env import Board
@@ -13,7 +13,7 @@ app = FastAPI(title="Bagh Chal API")
 
 # Enable CORS
 app.add_middleware(
-    CORSMiddleware,
+    CORSMiddleware, # type: ignore
     allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
@@ -23,18 +23,18 @@ app.add_middleware(
 # In-memory store
 games: Dict[str, Dict] = {}
 
-def get_game_state(game_id: str, board: Board, message: str = None) -> GameState:
+def get_game_state(game_id: str, board: Board, message: Optional[str] = None) -> GameState:
     winner = None
     if board.is_game_over():
         try:
             winner = str(board.winner())
         except:
             winner = "Draw"
-            
+
     # Serialize board for frontend
     # Board object is not directly serializable, need to convert to list of lists of strings/ints
     board_data = [[str(c) if c != 0 else "" for c in row] for row in board.board]
-    
+
     return GameState(
         board=board_data,
         turn=board.next_turn,
@@ -65,7 +65,7 @@ async def create_game(config: GameConfig):
 async def get_game(game_id: str):
     if game_id not in games:
         raise HTTPException(status_code=404, detail="Game not found")
-    
+
     game = games[game_id]
     return get_game_state(game_id, game["board"])
 
@@ -73,32 +73,32 @@ async def get_game(game_id: str):
 async def make_move(game_id: str, move_req: MoveRequest):
     if game_id not in games:
         raise HTTPException(status_code=404, detail="Game not found")
-    
+
     game = games[game_id]
     board = game["board"]
-    
+
     try:
         # Use pure_move to handle simplified coordinates (e.g. "11", "1112")
         # and automatically detect captures vs moves.
         board.pure_move(move_req.move)
-        
+
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
-        
+
     return get_game_state(game_id, board, message="Move accepted")
 
 @app.post("/api/games/{game_id}/bot-move", response_model=GameState)
 async def bot_move(game_id: str):
     if game_id not in games:
         raise HTTPException(status_code=404, detail="Game not found")
-    
+
     game = games[game_id]
     board = game["board"]
     engine = game["engine"]
-    
+
     if board.is_game_over():
         return get_game_state(game_id, board, message="Game over")
-        
+
     try:
         best_move, _ = engine.get_best_move(board)
         # best_move returned by engine is a string like "1112" or "11" (no prefix?)
@@ -106,13 +106,13 @@ async def bot_move(game_id: str):
         # Checking engine.py: it returns `best_move` which comes from `board.possible_moves()`.
         # `possible_moves` returns sets of strings like "G11" or "B1122".
         # So it should be directly usable in `board.move()`.
-        
+
         if best_move:
              board.move(best_move)
              msg = f"Bot played {best_move}"
         else:
              msg = "Bot has no moves (Game Over?)"
-             
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Bot failed: {str(e)}")
 

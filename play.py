@@ -3,11 +3,13 @@ import sys
 import logging
 import os
 import time
+import re
+import datetime
+from openai import OpenAI, RateLimitError
 
 # Capture the original working directory before imports (baghchal changes CWD)
 ORIGINAL_CWD = os.getcwd()
 
-from openai import OpenAI
 from baghchal.env import Board
 from baghchal.lookup_table import reversed_action_space
 
@@ -29,6 +31,35 @@ def create_client(api_key):
         base_url="https://openrouter.ai/api/v1",
         api_key=api_key,
     )
+
+def sanitize_filename(name):
+    return re.sub(r'[^a-zA-Z0-9]', '', name)
+
+def save_pgn(board, experiment_name, bestof, model1, model2, result, termination_reason):
+    timestamp = datetime.datetime.now().strftime("%Y_%m_%d")
+    sanitized_m1 = sanitize_filename(model1)
+    sanitized_m2 = sanitize_filename(model2)
+    filename = os.path.join(ORIGINAL_CWD, f"logs/game_logs/{timestamp}_{experiment_name}_bestof{bestof}_{sanitized_m1}_vs_{sanitized_m2}.pgn")
+    
+    # Construct PGN header
+    date_str = datetime.datetime.now().strftime("%Y.%m.%d")
+    pgn_content = f"""
+[Event "{experiment_name}"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "{date_str}"]
+[Round "BestOf{bestof}"]
+[White "{model1} (Goat)"]
+[Black "{model2} (Tiger)"]
+[Result "{result}"]
+[Termination "{termination_reason}"]
+
+{board.pgn}
+"""
+    try:
+        with open(filename, "a") as f:
+            f.write(pgn_content + "\n\n")
+    except Exception as e:
+        logger.error(f"Failed to save PGN: {e}")
 
 def get_valid_moves_str(board):
     moves = board.possible_moves()
@@ -109,6 +140,14 @@ def get_llm_move(client, model, board, retries=3):
             messages.append({"role": "assistant", "content": content})
             messages.append({"role": "user", "content": f"Invalid move '{content}'. The valid moves are: [{valid_moves}]. Please output ONLY the move string from the list."})
             
+        except RateLimitError as e:
+            logger.error(f"Rate limit error for {model}: {e}")
+            if attempt < retries - 1:
+                logger.info("Sleeping for 5 minutes before retrying...")
+                time.sleep(300)
+            else:
+                logger.error("Max retries reached for rate limit.")
+
         except Exception as e:
             logger.error(f"Error calling LLM {model}: {e}")
             # On API error, we might want to retry. The loop continues.
@@ -185,7 +224,6 @@ def play_game(model1, model2):
     logger.info(f"Total Moves: {move_count}")
     logger.info(f"Final FEN: {board.fen}")
     logger.info(f"PGN: {board.pgn}")
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Play Bagh-Chal with LLMs")

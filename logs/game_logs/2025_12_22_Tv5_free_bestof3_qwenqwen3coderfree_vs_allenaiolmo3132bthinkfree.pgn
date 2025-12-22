@@ -1,0 +1,12 @@
+[Event "Tv5_free"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "qwen/qwen3-coder:free (Goat)"]
+[Black "allenai/olmo-3.1-32b-think:free (Tiger)"]
+[Result "0-1"]
+[Termination "Illegal Move"]
+
+ 1. G33 B1122 2. G34 B2232 3. G31 B3222 4. G23 B2213 5. G32 B5544 {Forfeit: qwen/qwen3-coder:free made illegal move}
+
+
