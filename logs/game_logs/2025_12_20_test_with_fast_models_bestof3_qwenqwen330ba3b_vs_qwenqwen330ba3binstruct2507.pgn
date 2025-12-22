@@ -1,0 +1,24 @@
+[Event "test_with_fast_models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.20"]
+[Round "BestOf3"]
+[White "qwen/qwen3-30b-a3b (Goat)"]
+[Black "qwen/qwen3-30b-a3b-instruct-2507 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G32 B2213 3. G14 B1323 4. G25 Bx1513 5. G31 B1314 6. G34 B2313 7. G35 B1323 8. G22 Bx2321 9. G24 B2111 10. G13 B1122 11. G15 Bx2242 12. G32 Bx1412 13. G13 Bx1214# 0-1
+
+
+[Event "test_with_fast_models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.20"]
+[Round "BestOf3"]
+[White "qwen/qwen3-30b-a3b (Goat)"]
+[Black "qwen/qwen3-30b-a3b-instruct-2507 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G32 Bx2242 3. G41 Bx4224 4. G25 Bx1535 5. G34 Bx2444 6. G45 B4433 7. G32 B3324 8. G33 Bx2442# 0-1
+
+

@@ -1,0 +1,39 @@
+
+[Event "Tv1_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "meta-llama/llama-4-maverick (Goat)"]
+[Black "mistralai/mistral-large-2512 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G13 B1122 2. G14 B2212 3. G22 Bx1232 4. G12 B3231 5. G21 Bx3111 6. G23 B1121 7. G22 B5545 8. G32 B5141 9. G25 Bx1535 10. G33 B4131 11. G42 Bx3153 12. G42 Bx5331# 0-1
+
+
+
+[Event "Tv1_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "meta-llama/llama-4-maverick (Goat)"]
+[Black "mistralai/mistral-large-2512 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G13 B1122 2. G14 B2212 3. G22 Bx1232 4. G12 B5141 5. G11 B3231 6. G23 B5545 7. G32 Bx3133 8. G32 Bx3331 9. G32 Bx3133 10. G32 Bx3331# 0-1
+
+
+
+[Event "Tv1_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "meta-llama/llama-4-maverick (Goat)"]
+[Black "mistralai/mistral-large-2512 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G14 Bx1513 2. G22 Bx1331 3. G52 Bx5153 4. G14 B5343 5. G13 B3141 6. G44 Bx4345 7. G15 B4131 8. G53 B3121 9. G52 B4535 10. G32 B3525 11. G24 Bx2523# 0-1
+
+

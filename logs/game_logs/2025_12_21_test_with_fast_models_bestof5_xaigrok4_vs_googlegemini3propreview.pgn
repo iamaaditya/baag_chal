@@ -1,0 +1,13 @@
+
+[Event "test_with_fast_models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "x-ai/grok-4 (Goat)"]
+[Black "google/gemini-3-pro-preview (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G44 B1524 3. G42 B2232 4. G34 Bx3252 5. G35 Bx2442 6. G33 Bx4224 7. G33 Bx2442 8. G43 Bx5533# 0-1
+
+

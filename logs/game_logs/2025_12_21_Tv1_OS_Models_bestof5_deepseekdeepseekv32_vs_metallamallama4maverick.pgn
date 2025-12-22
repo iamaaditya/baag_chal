@@ -1,0 +1,26 @@
+
+[Event "Tv1_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "deepseek/deepseek-v3.2 (Goat)"]
+[Black "meta-llama/llama-4-maverick (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1121 2. G11 B1525 3. G13 B2131 4. G12 B3122 5. G34 Bx2244 6. G14 B4454 7. G15 B5142 8. G22 B4232 9. G21 B3233 10. G23 B2535 11. G24 B3525 12. G31 B5444 13. G32 B4453 14. G35 B5354 15. G41 B5453 16. G44 B5354 17. G42 B5453 18. G43 B5554 19. G45 B5455 20. G51 B5354 21. G5152 Bx3353 22. G2233 Bx5351 23. G3343 Bx5533 24. G3444 Bx3353# 0-1
+
+
+
+[Event "Tv1_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "deepseek/deepseek-v3.2 (Goat)"]
+[Black "meta-llama/llama-4-maverick (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1524 2. G13 B2425 3. G12 B1122 4. G23 Bx2244 5. G22 B5141 6. G11 B4454 7. G14 B4131 8. G15 B3132 9. G24 B5544 10. G33 B4455 11. G31 B3242 12. G32 B4253 13. G21 B5344 14. G34 B4443 15. G35 B5545 16. G44 B4555 17. G41 B5545 18. G42 B4555 19. G45 B5453 20. G51 B5354 21. G4253 B4342 22. G3343 Bx5452 23. G4453 Bx4244 24. G3242 B5554 25. G2433 Bx5232 26. G3342 Bx5452# 0-1
+
+

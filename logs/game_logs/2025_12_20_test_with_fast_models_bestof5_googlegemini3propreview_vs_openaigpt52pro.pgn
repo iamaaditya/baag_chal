@@ -1,0 +1,26 @@
+
+[Event "test_with_fast_models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.20"]
+[Round "BestOf5"]
+[White "google/gemini-3-pro-preview (Goat)"]
+[Black "openai/gpt-5.2-pro (Tiger)"]
+[Result "0-1"]
+[Termination "Illegal Move"]
+
+ 1. G33 B5544 2. G22 B1524 3. G42 B2423 4. G43 Bx2321 5. G22 Bx2123 6. G53 Bx4422 7. G52 Bx5133 {Forfeit: google/gemini-3-pro-preview made illegal move}
+
+
+
+[Event "test_with_fast_models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.20"]
+[Round "BestOf5"]
+[White "google/gemini-3-pro-preview (Goat)"]
+[Black "openai/gpt-5.2-pro (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B5544 2. G22 B5142 3. G24 B4434 4. G32 Bx3414 5. G24 Bx1434 6. G24 Bx3414 7. G24 Bx1434 8. G24 Bx3414# 0-1
+
+

@@ -1,0 +1,26 @@
+
+[Event "Tv1_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "mistralai/mistral-large-2512 (Goat)"]
+[Black "deepseek/deepseek-v3.2 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1112 2. G22 Bx1232 3. G34 B5142 4. G31 B4243 5. G22 Bx4323 6. G33 Bx2343 7. G33 Bx4323 8. G33 Bx2343# 0-1
+
+
+
+[Event "Tv1_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "mistralai/mistral-large-2512 (Goat)"]
+[Black "deepseek/deepseek-v3.2 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G32 Bx2242 3. G32 Bx4222 4. G34 Bx2244 5. G33 Bx4424 6. G32 Bx2442# 0-1
+
+
