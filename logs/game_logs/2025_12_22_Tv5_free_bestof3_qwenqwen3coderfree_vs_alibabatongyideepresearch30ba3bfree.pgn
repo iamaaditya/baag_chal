@@ -1,0 +1,24 @@
+[Event "Tv5_free"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "qwen/qwen3-coder:free (Goat)"]
+[Black "alibaba/tongyi-deepresearch-30b-a3b:free (Tiger)"]
+[Result "0-1"]
+[Termination "Illegal Move"]
+
+ {Forfeit: qwen/qwen3-coder:free made illegal move}
+
+
+[Event "Tv5_free"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "qwen/qwen3-coder:free (Goat)"]
+[Black "alibaba/tongyi-deepresearch-30b-a3b:free (Tiger)"]
+[Result "0-1"]
+[Termination "Illegal Move"]
+
+ {Forfeit: qwen/qwen3-coder:free made illegal move}
+
+

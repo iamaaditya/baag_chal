@@ -1,0 +1,24 @@
+[Event "Tv5_free"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "meta-llama/llama-3.1-405b-instruct:free (Goat)"]
+[Black "tngtech/deepseek-r1t-chimera:free (Tiger)"]
+[Result "0-1"]
+[Termination "Illegal Move"]
+
+ {Forfeit: meta-llama/llama-3.1-405b-instruct:free made illegal move}
+
+
+[Event "Tv5_free"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "meta-llama/llama-3.1-405b-instruct:free (Goat)"]
+[Black "tngtech/deepseek-r1t-chimera:free (Tiger)"]
+[Result "0-1"]
+[Termination "Illegal Move"]
+
+ {Forfeit: meta-llama/llama-3.1-405b-instruct:free made illegal move}
+
+

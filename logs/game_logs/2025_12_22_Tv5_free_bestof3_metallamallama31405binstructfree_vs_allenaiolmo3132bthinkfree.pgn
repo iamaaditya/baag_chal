@@ -1,0 +1,24 @@
+[Event "Tv5_free"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "meta-llama/llama-3.1-405b-instruct:free (Goat)"]
+[Black "allenai/olmo-3.1-32b-think:free (Tiger)"]
+[Result "0-1"]
+[Termination "Illegal Move"]
+
+ {Forfeit: meta-llama/llama-3.1-405b-instruct:free made illegal move}
+
+
+[Event "Tv5_free"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "meta-llama/llama-3.1-405b-instruct:free (Goat)"]
+[Black "allenai/olmo-3.1-32b-think:free (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1525 2. G23 B2524 3. G22 B1112 4. G21 B2434 5. G13 B3424 6. G25 B2434 7. G32 B3435 8. G43 B5142 9. G15 B5544 10. G55 B4253 11. G42 B5354 12. G53 B1211 13. G14 B4434 14. G41 B5444 15. G24 Bx1131 16. G21 B4454 17. G51 Bx3111 18. G21 Bx1131 19. G21 B3444 20. G45 B4434 21. G2211 Bx5452 22. G4353 B3544 23. G2435 Bx4422# 0-1
+
+

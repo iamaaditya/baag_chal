@@ -1,0 +1,12 @@
+[Event "Tv4_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "mistralai/mistral-large-2512 (Goat)"]
+[Black "microsoft/phi-4-reasoning-plus (Tiger)"]
+[Result "1-0"]
+[Termination "Normal"]
+
+ 1. G33 B5152 2. G32 B5251 3. G34 B5152 4. G31 B5251 5. G35 B5554 6. G23 B5453 7. G22 B5354 8. G21 B5455 9. G24 B5554 10. G41 B5453 11. G42 B5354 12. G43 B5453 13. G44 B5352 14. G25 B5253 15. G45 B1514 16. G15 B1413 17. G55 B1314 18. G54 B5152 19. G51 B1413 20. G14 B1312 21. G2313# 1-0
+
+

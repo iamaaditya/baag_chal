@@ -1,0 +1,12 @@
+[Event "Tv4_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "mistralai/mistral-large-2512 (Goat)"]
+[Black "meta-llama/llama-4-maverick (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1524 2. G22 Bx2442 3. G33 Bx4224 4. G23 Bx1133 5. G31 Bx3313 6. G33 B1323 7. G34 Bx2444# 0-1
+
+

@@ -1,0 +1,12 @@
+[Event "Tv4_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "deepseek/deepseek-v3.2 (Goat)"]
+[Black "microsoft/phi-4-reasoning-plus (Tiger)"]
+[Result "0-1"]
+[Termination "Illegal Move"]
+
+ 1. G33 B5152 2. G22 B5251 3. G23 B5554 4. G14 B5152 5. G12 B5251 6. G13 B5152 7. G21 B5253 8. G24 B5343 9. G25 B4342 10. G31 B4252 11. G34 B5253 12. G32 B5342 13. G35 B5455 {Forfeit: deepseek/deepseek-v3.2 made illegal move}
+
+

@@ -1,0 +1,24 @@
+[Event "Tv4_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "meta-llama/llama-4-maverick (Goat)"]
+[Black "microsoft/phi-4-reasoning-plus (Tiger)"]
+[Result "1/2-1/2"]
+[Termination "Normal"]
+
+ 1. G13 B5554 2. G23 B5455 3. G33 B1525 4. G42 B1121 5. G24 B5545 6. G32 B4535 7. G34 B3545 8. G14 B4535 9. G43 B3545 10. G15 B4535 11. G44 B3545 12. G52 B4535 13. G53 B3545 14. G55 B4535 15. G41 B3545 16. G12 B4535 17. G54 B3545 18. G31 B4535 19. G22 B3545 20. G35 B2111 21. G3121 Bx5131 22. G5251 B3141 23. G5152 B4131 24. G5251 B3141 25. G5152 B4131# 1/2-1/2
+
+
+[Event "Tv4_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "meta-llama/llama-4-maverick (Goat)"]
+[Black "microsoft/phi-4-reasoning-plus (Tiger)"]
+[Result "1-0"]
+[Termination "Illegal Move"]
+
+ 1. G22 B5554 2. G23 B5455 3. G24 B1112 4. G14 B1211 5. G32 B5152 6. G33 B5251 7. G41 B1525 8. G13 B2515 9. G52 B1525 10. G53 B5554 11. G43 B5455 12. G44 B5554 13. G34 B5455 14. G21 B2515 15. G35 B5554 16. G25 B5142 17. G51 B4231 18. G45 B5455 19. G54 B3142 20. G31 B1112 21. G2211 B1222 22. G1312 B2213 23. G3222 B4232 24. G5242 {Forfeit: microsoft/phi-4-reasoning-plus made illegal move}
+
+

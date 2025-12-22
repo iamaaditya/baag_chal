@@ -1,0 +1,12 @@
+[Event "Tv5_free"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf3"]
+[White "mistralai/mistral-small-3.1-24b-instruct:free (Goat)"]
+[Black "allenai/olmo-3.1-32b-think:free (Tiger)"]
+[Result "0-1"]
+[Termination "Illegal Move"]
+
+ 1. G33 B1122 2. G32 B2223 3. G31 B5544 4. G34 B2324 5. G35 B1525 6. G41 B5142 7. G23 B2414 8. G43 B1424 9. G53 B4252 10. G21 B2515 11. G22 Bx4442 12. G25 B4243 {Forfeit: mistralai/mistral-small-3.1-24b-instruct:free made illegal move}
+
+

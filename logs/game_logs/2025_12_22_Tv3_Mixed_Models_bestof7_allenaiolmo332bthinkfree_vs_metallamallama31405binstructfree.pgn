@@ -4,11 +4,11 @@
 [Date "2025.12.22"]
 [Round "BestOf7"]
 [White "allenai/olmo-3-32b-think:free (Goat)"]
-[Black "openai/gpt-5.2 (Tiger)"]
+[Black "meta-llama/llama-3.1-405b-instruct:free (Tiger)"]
 [Result "0-1"]
 [Termination "Normal"]
 
- 1. G13 B1112 2. G33 Bx1214 3. G34 B5544 4. G55 Bx4424 5. G32 Bx2442 6. G23 Bx4222 7. G25 Bx2224# 0-1
+ 1. G33 B1514 2. G23 B1413 3. G12 B1322 4. G21 Bx1131 5. G43 Bx2224 6. G42 Bx3153 7. G54 Bx2442 8. G52 Bx4244# 0-1
 
 
 
@@ -17,11 +17,11 @@
 [Date "2025.12.22"]
 [Round "BestOf7"]
 [White "allenai/olmo-3-32b-think:free (Goat)"]
-[Black "openai/gpt-5.2 (Tiger)"]
+[Black "meta-llama/llama-3.1-405b-instruct:free (Tiger)"]
 [Result "0-1"]
 [Termination "Normal"]
 
- 1. G33 B1122 2. G25 Bx2244 3. G33 Bx4422 4. G14 Bx1535 5. G33 Bx2244 6. G24 Bx3513# 0-1
+ 1. G33 B1121 2. G32 B2111 3. G12 B1122 4. G35 Bx2242 5. G34 Bx4224 6. G44 B2423 7. G43 Bx5533 8. G42 Bx3353 9. G31 Bx5133# 0-1
 
 
 
@@ -30,11 +30,11 @@
 [Date "2025.12.22"]
 [Round "BestOf7"]
 [White "allenai/olmo-3-32b-think:free (Goat)"]
-[Black "openai/gpt-5.2 (Tiger)"]
+[Black "meta-llama/llama-3.1-405b-instruct:free (Tiger)"]
 [Result "0-1"]
 [Termination "Normal"]
 
- 1. G33 B5544 2. G41 Bx4422 3. G52 Bx5131 4. G21 B1524 5. G55 B2233 6. G12 Bx1113 7. G32 Bx3111 8. G23 Bx2422# 0-1
+ 1. G12 B1121 2. G25 B2122 3. G32 B2213 4. G14 Bx1535 5. G23 Bx1311 6. G33 B3524 7. G34 Bx2422 8. G23 Bx2224 9. G25 Bx2442# 0-1
 
 
 
@@ -43,10 +43,10 @@
 [Date "2025.12.22"]
 [Round "BestOf7"]
 [White "allenai/olmo-3-32b-think:free (Goat)"]
-[Black "openai/gpt-5.2 (Tiger)"]
+[Black "meta-llama/llama-3.1-405b-instruct:free (Tiger)"]
 [Result "0-1"]
 [Termination "Normal"]
 
- 1. G33 B1122 2. G34 Bx2244 3. G35 Bx4424 4. G33 Bx2442 5. G11 B4233 6. G34 B1525 7. G24 Bx2545 8. G12 Bx3335# 0-1
+ 1. G22 B1514 2. G12 Bx1113 3. G23 Bx1331 4. G41 B3121 5. G33 Bx5131 6. G24 Bx1434 7. G42 Bx3432# 0-1
 
 
