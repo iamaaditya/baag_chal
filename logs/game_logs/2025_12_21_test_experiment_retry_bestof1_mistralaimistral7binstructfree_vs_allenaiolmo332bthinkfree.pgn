@@ -1,0 +1,13 @@
+
+[Event "test_experiment_retry"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf1"]
+[White "mistralai/mistral-7b-instruct:free (Goat)"]
+[Black "allenai/olmo-3-32b-think:free (Tiger)"]
+[Result "0-1"]
+[Termination "Illegal Move"]
+
+ 1. G33 B5152 {Forfeit: mistralai/mistral-7b-instruct:free made illegal move}
+
+

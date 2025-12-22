@@ -1,0 +1,26 @@
+
+[Event "Tv1_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "microsoft/phi-4-reasoning-plus (Goat)"]
+[Black "deepseek/deepseek-v3.2 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G13 B2211 3. G23 B1122 4. G45 Bx5535 5. G14 Bx2244 6. G33 Bx4422 7. G33 Bx2244 8. G33 Bx4422# 0-1
+
+
+
+[Event "Tv1_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "microsoft/phi-4-reasoning-plus (Goat)"]
+[Black "deepseek/deepseek-v3.2 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G13 Bx2244 3. G33 B1514 4. G12 B4454 5. G45 B5444 6. G35 Bx4422 7. G33 B2223 8. G43 B5142 9. G24 Bx4244 10. G43 Bx4442 11. G43 Bx4244# 0-1
+
+

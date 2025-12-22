@@ -1,0 +1,26 @@
+
+[Event "Tv1_Best_Fast_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "openai/gpt-5.2 (Goat)"]
+[Black "anthropic/claude-sonnet-4.5 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B5544 2. G22 B4435 3. G34 B3524 4. G42 Bx2444 5. G24 B4443 6. G23 Bx4341 7. G32 B4131 8. G13 B3142 9. G31 B4243 10. G21 B5141 11. G42 B4344 12. G43 B4434 13. G14 B3444 14. G12 B4455 15. G35 B5544 16. G25 B4445 17. G44 B4151 18. G34 B4555 19. G53 B5545 20. G52 B5141 21. G5251 B4555 22. G4445 B5544 23. G5354 B4453 24. G4555 B5352 25. G4353 Bx4143 26. G3141 Bx1131 27. G3242 Bx5232# 0-1
+
+
+
+[Event "Tv1_Best_Fast_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "openai/gpt-5.2 (Goat)"]
+[Black "anthropic/claude-sonnet-4.5 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G44 B2232 3. G34 B3242 4. G24 B4243 5. G45 Bx4323 6. G33 Bx2343 7. G33 Bx4323 8. G35 Bx5533 9. G25 B3344 10. G33 Bx4422# 0-1
+
+

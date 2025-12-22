@@ -1,0 +1,13 @@
+
+[Event "Tv1_Free_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf5"]
+[White "qwen/qwen3-coder:free (Goat)"]
+[Black "deepseek/deepseek-r1-0528:free (Tiger)"]
+[Result "0-1"]
+[Termination "Illegal Move"]
+
+ {Forfeit: qwen/qwen3-coder:free made illegal move}
+
+

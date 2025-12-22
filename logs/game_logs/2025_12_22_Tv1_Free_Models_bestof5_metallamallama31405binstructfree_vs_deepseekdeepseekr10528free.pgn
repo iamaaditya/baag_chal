@@ -1,0 +1,13 @@
+
+[Event "Tv1_Free_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf5"]
+[White "meta-llama/llama-3.1-405b-instruct:free (Goat)"]
+[Black "deepseek/deepseek-r1-0528:free (Tiger)"]
+[Result "1-0"]
+[Termination "Illegal Move"]
+
+ 1. G33 {Forfeit: deepseek/deepseek-r1-0528:free made illegal move}
+
+

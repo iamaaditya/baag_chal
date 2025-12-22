@@ -1,0 +1,39 @@
+
+[Event "Tv1_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "meta-llama/llama-4-maverick (Goat)"]
+[Black "qwen/qwen3-max (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G14 Bx1513 2. G22 Bx1133 3. G21 B1323 4. G24 Bx2325 5. G23 Bx3313 6. G12 Bx1311# 0-1
+
+
+
+[Event "Tv1_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "meta-llama/llama-4-maverick (Goat)"]
+[Black "qwen/qwen3-max (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G13 B1122 2. G14 B1524 3. G12 B2233 4. G21 B2435 5. G22 Bx3311 6. G22 Bx1131 7. G25 Bx3515 8. G25 Bx1535 9. G33 B3121 10. G32 Bx2123# 0-1
+
+
+
+[Event "Tv1_OS_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "meta-llama/llama-4-maverick (Goat)"]
+[Black "qwen/qwen3-max (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G23 B1122 2. G12 Bx2224 3. G23 Bx2422 4. G14 Bx1513 5. G15 Bx1311 6. G13 B2233 7. G14 B3322 8. G32 Bx2242# 0-1
+
+

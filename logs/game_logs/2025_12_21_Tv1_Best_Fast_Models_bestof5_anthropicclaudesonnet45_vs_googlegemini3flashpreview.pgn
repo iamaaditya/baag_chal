@@ -1,0 +1,26 @@
+
+[Event "Tv1_Best_Fast_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "anthropic/claude-sonnet-4.5 (Goat)"]
+[Black "google/gemini-3-flash-preview (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G13 B2223 3. G24 Bx2325 4. G23 B2524 5. G44 Bx2422 6. G23 Bx2224 7. G23 Bx2422 8. G23 Bx2224# 0-1
+
+
+
+[Event "Tv1_Best_Fast_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "anthropic/claude-sonnet-4.5 (Goat)"]
+[Black "google/gemini-3-flash-preview (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G13 B2223 3. G34 Bx2343 4. G33 Bx4323 5. G33 Bx2343 6. G22 B4333 7. G32 Bx3311 8. G33 B1122 9. G23 Bx2224# 0-1
+
+

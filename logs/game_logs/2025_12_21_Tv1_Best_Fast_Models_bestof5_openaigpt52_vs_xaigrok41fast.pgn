@@ -1,0 +1,39 @@
+
+[Event "Tv1_Best_Fast_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "openai/gpt-5.2 (Goat)"]
+[Black "x-ai/grok-4.1-fast (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G44 B2223 3. G43 B5142 4. G24 Bx2325 5. G24 Bx2523 6. G24 Bx2325 7. G24 Bx2523 8. G34 Bx4224# 0-1
+
+
+
+[Event "Tv1_Best_Fast_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "openai/gpt-5.2 (Goat)"]
+[Black "x-ai/grok-4.1-fast (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G44 B2223 3. G43 B1524 4. G42 B2434 5. G32 Bx3454 6. G13 B2322 7. G44 Bx5434 8. G44 Bx3454 9. G44 Bx5434 10. G44 Bx3454# 0-1
+
+
+
+[Event "Tv1_Best_Fast_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "openai/gpt-5.2 (Goat)"]
+[Black "x-ai/grok-4.1-fast (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G44 B2223 3. G43 B5142 4. G24 Bx2325 5. G24 Bx2523 6. G24 Bx2325 7. G24 Bx2523 8. G35 Bx4224# 0-1
+
+

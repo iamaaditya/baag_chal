@@ -1,0 +1,26 @@
+
+[Event "Tv1_Best_Fast_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "x-ai/grok-4.1-fast (Goat)"]
+[Black "google/gemini-3-flash-preview (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G24 Bx2244 3. G33 Bx4422 4. G23 Bx1533 5. G13 Bx2224 6. G53 B2414 7. G12 B1415 8. G23 B3334 9. G14 B5142 10. G54 B4232 11. G33 B3424 12. G34 Bx2422# 0-1
+
+
+
+[Event "Tv1_Best_Fast_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.21"]
+[Round "BestOf5"]
+[White "x-ai/grok-4.1-fast (Goat)"]
+[Black "google/gemini-3-flash-preview (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G44 B2223 3. G43 B2322 4. G34 B2223 5. G13 B2322 6. G24 B2223 7. G35 Bx2325 8. G45 B2524 9. G42 B2423 10. G25 B2324 11. G14 B5141 12. G51 B4131 13. G53 B3121 14. G23 Bx2422 15. G54 B2223 16. G22 B2111 17. G21 Bx1131 18. G24 Bx2321 19. G32 B3141 20. G31 B2111 21. G3122 B4131 22. G2221 B3141 23. G3231 B1112 24. G5152 B4151 25. G2111 B5141 26. G3122 Bx1232# 0-1
+
+
