@@ -1,0 +1,13 @@
+
+[Event "Tv3_Mixed_Models"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.22"]
+[Round "BestOf7"]
+[White "openai/gpt-5.2 (Goat)"]
+[Black "allenai/olmo-3-32b-think:free (Tiger)"]
+[Result "1-0"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G44 B2232 3. G34 B5545 4. G43 B4535 5. G53 B3524 6. G54 B2435 7. G52 B5142 8. G24 B3545 9. G55 B4535 10. G13 B1514 11. G12 B3545 12. G23 B4535 13. G15 B3231 14. G25 B4251 15. G32 B3122 16. G42 B2221 17. G45 B2122 18. G31 B2221 19. G41 B2122 20. G21 B2211 21. G3222# 1-0
+
+
