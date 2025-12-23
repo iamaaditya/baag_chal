@@ -118,6 +118,77 @@ async def bot_move(game_id: str):
 
     return get_game_state(game_id, board, message=msg)
 
+@app.post("/api/games/{game_id}/undo", response_model=GameState)
+async def undo_move(game_id: str):
+    if game_id not in games:
+        raise HTTPException(status_code=404, detail="Game not found")
+
+    game = games[game_id]
+    board = game["board"]
+
+    # We want to undo the Bot's move AND the Player's move to get back to Player turn.
+    # Check if history has enough moves?
+    # Board usually tracks history.
+
+    try:
+        # Undo Bot's move
+        board.undo()
+
+        # Undo Player's move
+        # Check if it was actually the bot who just moved?
+        # If it's Player's turn now, it means Bot just moved (since Bot moves last).
+        # Wait, if we are in state "Player to move", then Bot moved previously.
+        # So:
+        # 1. State: Player's turn. Board has N moves. Last move was Bot.
+        # 2. Undo() -> State: Bot's turn. Board has N-1 moves. Last move was Player.
+        # 3. Undo() -> State: Player's turn. Board has N-2 moves.
+
+        # However, what if the game is just started?
+        # If moves made is 0, cannot undo.
+        # If moves made is 1 (only Player moved, Bot crashed?), undo once.
+
+        # Let's try to undo twice if possible, stopping if we hit start.
+        if board.no_of_moves_made > 0:
+             board.undo()
+
+        if board.no_of_moves_made > 0:
+             board.undo()
+
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Undo failed: {str(e)}")
+
+    return get_game_state(game_id, board, message="Undone last round")
+
+@app.get("/api/games/{game_id}/seek/{move_index}", response_model=GameState)
+async def seek_to_move(game_id: str, move_index: int):
+    if game_id not in games:
+        raise HTTPException(status_code=404, detail="Game not found")
+
+    game = games[game_id]
+    original_board = game["board"]
+
+    # Create a fresh board and replay moves
+    # We use a temporary board to avoid mutating the live game state
+    temp_board = Board()
+
+    # Get PGN moves
+    # baghchal.env.Board.pgn is a string like "G11 B1122 G..."
+    pgn = original_board.pgn
+    moves = pgn.strip().split() if pgn.strip() else []
+
+    if move_index < 0:
+        move_index = 0
+    if move_index > len(moves):
+        move_index = len(moves)
+
+    try:
+        for i in range(move_index):
+            temp_board.move(moves[i])
+    except Exception as e:
+         raise HTTPException(status_code=400, detail=f"Failed to replay to move {move_index}: {str(e)}")
+
+    return get_game_state(game_id, temp_board, message=f"Viewing move {move_index}")
+
 # Serve Frontend
 frontend_path = os.path.join(os.path.dirname(__file__), "../../frontend")
 if os.path.exists(frontend_path):

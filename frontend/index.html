@@ -25,7 +25,7 @@
                 <div class="controls">
                     <button id="new-game-btn">New Game (Human vs Bot)</button>
                     <!-- <button id="new-pvp-btn">New Game (PvP)</button> -->
-                    <button id="bot-move-btn" disabled>Trigger Bot Move</button>
+                    <button id="undo-btn">Undo</button>
                 </div>
                 <div id="message-log"></div>
             </div>
@@ -39,7 +39,7 @@
                     <line x1="50" y1="250" x2="450" y2="250" />
                     <line x1="50" y1="350" x2="450" y2="350" />
                     <line x1="50" y1="450" x2="450" y2="450" />
-                    
+
                     <!-- Vertical Lines -->
                     <line x1="50" y1="50" x2="50" y2="450" />
                     <line x1="150" y1="50" x2="150" y2="450" />
@@ -55,9 +55,23 @@
                     <line x1="50" y1="250" x2="250" y2="450" />
                     <line x1="450" y1="250" x2="250" y2="450" />
                 </svg>
-                
+
                 <div id="board-grid" class="board-grid">
                     <!-- JS will populate spots -->
+                </div>
+
+                <div class="navigation-controls">
+                    <button id="rewind-btn" title="First Move">⏪</button>
+                    <button id="prev-btn" title="Previous Move">◀️</button>
+                    <button id="next-btn" title="Next Move">▶️</button>
+                    <button id="fast-forward-btn" title="Last Move">⏩</button>
+                </div>
+            </div>
+
+            <div class="side-panel">
+                <h3>Move History</h3>
+                <div id="move-history" class="move-history">
+                    <!-- Moves will be populated here -->
                 </div>
             </div>
         </div>
