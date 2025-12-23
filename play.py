@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 def get_api_key():
     try:
-        file_path = os.path.join(ORIGINAL_CWD, '$HOME/.config/.or')
+        file_path = os.path.expanduser("~/.config/.or")
         with open(file_path, 'r') as f:
             return f.read().strip()
     except FileNotFoundError:

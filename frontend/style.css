@@ -25,17 +25,17 @@ body {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    max-width: 900px;
-    width: 100%;
+    max-width: 1200px;
+    width: 95%;
 }
 
 .game-area {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 2rem;
     margin-top: 2rem;
-    flex-wrap: wrap;
 }
 
 .board-container {
@@ -150,6 +150,22 @@ body {
     font-size: 1rem;
 }
 
+.load-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #ccc;
+}
+
+.load-section button {
+    background-color: #4CAF50; /* Green for loading */
+    font-size: 0.9rem;
+}
+
+.load-section button:hover:not(:disabled) {
+    background-color: #388E3C;
+}
+
+
 .controls button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
@@ -171,7 +187,9 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
 }
 
 .navigation-controls button {
@@ -199,10 +217,11 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
-    width: 280px;
+    width: 300px;
     height: 500px;
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
 .side-panel h3 {

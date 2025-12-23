@@ -5,6 +5,7 @@ let viewedGameState = null; // Represents what is currently being rendered (coul
 let currentMoveIndex = 0; // The index of the move being viewed
 let totalMoves = 0; // Total moves in the game so far
 let selectedSpot = null;
+let isRequestPending = false;
 
 console.log("Bagh Chal App Loaded - Version 1.2 (History & Navigation)");
 
@@ -18,6 +19,9 @@ const messageLog = document.getElementById('message-log');
 const moveHistoryDiv = document.getElementById('move-history');
 const newGameBtn = document.getElementById('new-game-btn');
 const undoBtn = document.getElementById('undo-btn');
+const loadPgnBtn = document.getElementById('load-pgn-btn');
+const uploadPgnBtn = document.getElementById('upload-pgn-btn');
+const pgnFileInput = document.getElementById('pgn-file-input');
 
 const rewindBtn = document.getElementById('rewind-btn');
 const prevBtn = document.getElementById('prev-btn');
@@ -26,6 +30,10 @@ const fastForwardBtn = document.getElementById('fast-forward-btn');
 
 if (newGameBtn) newGameBtn.addEventListener('click', startNewGame);
 if (undoBtn) undoBtn.addEventListener('click', undoMove);
+if (loadPgnBtn) loadPgnBtn.addEventListener('click', loadGameFromPaste);
+if (uploadPgnBtn) uploadPgnBtn.addEventListener('click', () => pgnFileInput.click());
+if (pgnFileInput) pgnFileInput.addEventListener('change', handleFileUpload);
+
 
 if (rewindBtn) rewindBtn.addEventListener('click', () => seekToMove(0));
 if (prevBtn) prevBtn.addEventListener('click', () => seekToMove(currentMoveIndex - 1));
@@ -33,6 +41,10 @@ if (nextBtn) nextBtn.addEventListener('click', () => seekToMove(currentMoveIndex
 if (fastForwardBtn) fastForwardBtn.addEventListener('click', () => seekToMove(totalMoves));
 
 async function startNewGame() {
+    if (isRequestPending) return;
+    isRequestPending = true;
+    updateUI();
+
     try {
         const res = await fetch(`${API_URL}/games`, {
             method: 'POST',
@@ -47,8 +59,68 @@ async function startNewGame() {
     } catch (e) {
         console.error(e);
         messageLog.innerText = "Error starting game.";
+    } finally {
+        isRequestPending = false;
+        updateUI();
     }
 }
+
+async function loadGameFromPaste() {
+    const pgn = prompt("Paste PGN string:");
+    if (pgn) {
+        await executeLoad(pgn);
+    }
+}
+
+async function handleFileUpload(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = async (e) => {
+        const pgn = e.target.result;
+        await executeLoad(pgn);
+    };
+    reader.readAsText(file);
+    // Clear input so same file can be uploaded again if needed
+    event.target.value = '';
+}
+
+async function executeLoad(pgn) {
+    if (isRequestPending) return;
+    isRequestPending = true;
+    updateUI();
+
+    try {
+        messageLog.innerText = "Loading Game...";
+        const res = await fetch(`${API_URL}/games/load`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ pgn: pgn })
+        });
+
+        if (!res.ok) {
+            const err = await res.json();
+            messageLog.innerText = err.detail || "Load Failed";
+            isRequestPending = false;
+            updateUI();
+            return;
+        }
+
+        const data = await res.json();
+        gameId = data.game_id;
+        selectedSpot = null;
+        messageLog.innerText = "Game Loaded Successfully!";
+        await fetchGameState();
+    } catch (e) {
+        console.error(e);
+        messageLog.innerText = "Error loading game.";
+    } finally {
+        isRequestPending = false;
+        updateUI();
+    }
+}
+
 
 async function fetchGameState() {
     if (!gameId) return;
@@ -67,13 +139,17 @@ async function fetchGameState() {
 }
 
 async function seekToMove(index, silent = false) {
-    if (!gameId) return;
+    if (!gameId || isRequestPending) return;
     if (index < 0) index = 0;
     if (index > totalMoves) index = totalMoves;
 
     currentMoveIndex = index;
 
-    if (!silent) messageLog.innerText = `Seeking to move ${currentMoveIndex}...`;
+    if (!silent) {
+        messageLog.innerText = `Seeking to move ${currentMoveIndex}...`;
+        isRequestPending = true;
+        updateUI();
+    }
 
     try {
         const res = await fetch(`${API_URL}/games/${gameId}/seek/${currentMoveIndex}`);
@@ -91,16 +167,17 @@ async function seekToMove(index, silent = false) {
     } catch (e) {
         console.error(e);
         messageLog.innerText = "Seek Error";
+    } finally {
+        if (!silent) {
+            isRequestPending = false;
+            updateUI();
+        }
     }
 }
-
 async function makeMove(moveStr) {
-    if (!gameId) return;
-
-    // If we are viewing history and attempt a move, we should probably jump to live state first?
-    // In most apps, making a move while in history truncates the future.
-    // However, our backend doesn't support branch truncation yet, it only modifies the 'live' board.
-    // So if you make a move, it will apply to the 'live' board.
+    if (!gameId || isRequestPending) return;
+    isRequestPending = true;
+    updateUI(); // Disable buttons
 
     try {
         const res = await fetch(`${API_URL}/games/${gameId}/move`, {
@@ -112,6 +189,8 @@ async function makeMove(moveStr) {
             const err = await res.json();
             messageLog.innerText = err.detail || "Invalid Move";
             selectedSpot = null;
+            isRequestPending = false;
+            updateUI();
             renderBoard(); // clear selection
             return;
         }
@@ -126,11 +205,17 @@ async function makeMove(moveStr) {
     } catch (e) {
         console.error(e);
         messageLog.innerText = "Error making move.";
+    } finally {
+        isRequestPending = false;
+        updateUI();
     }
 }
 
 async function triggerBotMove() {
-    if (!gameId) return;
+    if (!gameId || isRequestPending) return; // Prevent bot from being re-triggered if something else is happening
+    isRequestPending = true;
+    updateUI();
+
     messageLog.innerText = "Thinking...";
     try {
         const res = await fetch(`${API_URL}/games/${gameId}/bot-move`, {
@@ -140,12 +225,18 @@ async function triggerBotMove() {
     } catch (e) {
         console.error(e);
         messageLog.innerText = "Bot Error.";
+    } finally {
+        isRequestPending = false;
+        updateUI();
     }
 }
 
 async function undoMove() {
-     if (!gameId) return;
+     if (!gameId || isRequestPending) return;
+     isRequestPending = true;
      messageLog.innerText = "Undoing...";
+     updateUI();
+
      try {
          const res = await fetch(`${API_URL}/games/${gameId}/undo`, {
              method: 'POST'
@@ -154,14 +245,27 @@ async function undoMove() {
          if (!res.ok) {
              const err = await res.json();
              messageLog.innerText = err.detail || "Cannot Undo";
+             isRequestPending = false;
+             updateUI();
              return;
          }
 
-         await fetchGameState();
+         const data = await res.json();
+         liveGameState = data;
+         const moves = parsePGN(liveGameState.pgn);
+         totalMoves = moves.length;
+
+         messageLog.innerText = liveGameState.message || "Undone";
+
+         // Jump to the end of the new history
+         await seekToMove(totalMoves, true);
 
      } catch (e) {
          console.error(e);
          messageLog.innerText = "Undo Error";
+     } finally {
+         isRequestPending = false;
+         updateUI();
      }
 }
 
@@ -182,12 +286,14 @@ function updateUI() {
     turnIndicator.style.color = viewedGameState.turn === 'G' ? 'black' : 'orange';
 
     // Buttons
-    if (undoBtn) undoBtn.disabled = viewedGameState.game_over;
+    const buttonsDisabled = viewedGameState.game_over || isRequestPending;
+    if (undoBtn) undoBtn.disabled = buttonsDisabled || totalMoves === 0;
+    if (newGameBtn) newGameBtn.disabled = isRequestPending;
 
-    if (rewindBtn) rewindBtn.disabled = (currentMoveIndex === 0);
-    if (prevBtn) prevBtn.disabled = (currentMoveIndex === 0);
-    if (nextBtn) nextBtn.disabled = (currentMoveIndex === totalMoves);
-    if (fastForwardBtn) fastForwardBtn.disabled = (currentMoveIndex === totalMoves);
+    if (rewindBtn) rewindBtn.disabled = isRequestPending || (currentMoveIndex === 0);
+    if (prevBtn) prevBtn.disabled = isRequestPending || (currentMoveIndex === 0);
+    if (nextBtn) nextBtn.disabled = isRequestPending || (currentMoveIndex === totalMoves);
+    if (fastForwardBtn) fastForwardBtn.disabled = isRequestPending || (currentMoveIndex === totalMoves);
 
     // History Panel
     renderMoveHistory();
@@ -236,7 +342,7 @@ function renderMoveHistory() {
 
 function parsePGN(pgn) {
     if (!pgn) return [];
-    return pgn.trim().split(/\s+/).filter(m => m.length > 0);
+    return pgn.trim().split(/\s+/).filter(m => m.length > 0 && !m.endsWith('.'));
 }
 
 function renderBoard() {

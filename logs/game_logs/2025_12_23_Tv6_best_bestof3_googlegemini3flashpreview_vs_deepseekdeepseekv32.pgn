@@ -1,0 +1,26 @@
+
+[Event "Tv6_best"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.23"]
+[Round "BestOf3"]
+[White "google/gemini-3-flash-preview (Goat)"]
+[Black "deepseek/deepseek-v3.2 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G32 Bx2242 3. G32 Bx4222 4. G32 Bx2242 5. G32 Bx4224 6. G33 B2425 7. G34 B5142 8. G43 Bx4244# 0-1
+
+
+
+[Event "Tv6_best"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.23"]
+[Round "BestOf3"]
+[White "google/gemini-3-flash-preview (Goat)"]
+[Black "deepseek/deepseek-v3.2 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G32 Bx2242 3. G32 Bx4222 4. G32 Bx2242 5. G32 Bx4222 6. G32 Bx2242# 0-1
+
+

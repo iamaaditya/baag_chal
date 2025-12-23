@@ -4,6 +4,7 @@ from typing import List, Optional, Any
 class GameConfig(BaseModel):
     mode: str = "PvC" # PvC (Player vs Computer), PvP, CvC
     difficulty: int = 3 # Depth for minimax
+    human_side: str = "G" # Default to Goat for Human in PvC
 
 class MoveRequest(BaseModel):
     move: str # PGN string like "G11" or "G1213"
@@ -20,3 +21,6 @@ class GameState(BaseModel):
     pgn: str
     possible_moves: List[str]
     message: Optional[str] = None
+
+class LoadGameRequest(BaseModel):
+    pgn: str

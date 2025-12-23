@@ -1,0 +1,13 @@
+
+[Event "Tv6_best"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.23"]
+[Round "BestOf3"]
+[White "openai/gpt-5.2 (Goat)"]
+[Black "google/gemini-3-flash-preview (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G21 B2212 3. G24 B1222 4. G44 B2212 5. G42 B1222 6. G23 B2212 7. G34 B1222 8. G12 B2211 9. G22 Bx1113 10. G35 Bx1331 11. G53 Bx3111 12. G22 B1112 13. G32 B1211 14. G13 B1112 15. G14 B5141 16. G43 B4131 17. G25 B3141 18. G54 B4151 19. G45 B5141 20. G11 B4151 21. G3231 Bx1232 22. G4241 B5142 23. G1112 B4251 24. G2322 B5152 25. G1323 Bx1513# 0-1
+
+

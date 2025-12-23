@@ -1,0 +1,13 @@
+
+[Event "Tv6_best"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.23"]
+[Round "BestOf3"]
+[White "deepseek/deepseek-v3.2 (Goat)"]
+[Black "openai/gpt-5.2 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B1122 2. G11 Bx2244 3. G12 B4433 4. G13 B1524 5. G25 B2415 6. G14 Bx1535 7. G15 B5142 8. G22 B5544 9. G21 B4243 10. G23 B3332 11. G24 B3242 12. G25 B4434 13. G33 Bx3432 14. G33 Bx3234 15. G33 Bx3432# 0-1
+
+

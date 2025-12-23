@@ -1,0 +1,13 @@
+
+[Event "Tv6_best"]
+[Site "Bagh-Chal CLI Tournament"]
+[Date "2025.12.23"]
+[Round "BestOf3"]
+[White "x-ai/grok-4.1-fast (Goat)"]
+[Black "anthropic/claude-sonnet-4.5 (Tiger)"]
+[Result "0-1"]
+[Termination "Normal"]
+
+ 1. G33 B5544 2. G22 B4435 3. G44 Bx3553 4. G52 B5343 5. G23 Bx5153 6. G32 B4342 7. G24 B4243 8. G13 B4342 9. G34 B4243 10. G12 B5352 11. G14 B4353 12. G43 B5344 13. G21 Bx4442 14. G31 B4253 15. G35 B5242 16. G25 B4252 17. G51 B5354 18. G53 B5242 19. G52 B5444 20. G43 B4454 21. G3544 Bx1535 22. G5141 B3525 23. G4151 B2515 24. G5141 B4251 25. G3242 B1525 26. G3332 Bx1133# 0-1
+
+
